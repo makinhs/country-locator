@@ -1,5 +1,5 @@
 {
-  "name": "country-locator",
+  "name": "makinhs-country-locator",
   "version": "2.0.3",
   "description": "Detects country by a given geometry",
   "main": "dist/index.js",
@@ -44,5 +44,9 @@
     "jest": "^25.4.0",
     "ts-jest": "^25.4.0",
     "typescript": "^3.8.3"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/carmi2214/country-locator/issues"
+  },
+  "homepage": "https://github.com/carmi2214/country-locator#readme"
 }

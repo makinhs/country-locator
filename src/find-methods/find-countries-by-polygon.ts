@@ -41,3 +41,17 @@ export function findCountriesByPolygon(polygon: number[][]): CountryInfo[] {
         code: country.properties.ISO_A3
     }));
 }
+
+export function findCountriesByPolygonV2(polygon: number[][]): CountryInfo[] {
+    const validPolygon = validatePolygon(polygon);
+    const countriesInIntersection = [];
+    for(const country of COUNTRIES_GEO_JSON.features){
+        if(countryIntersectsWithPolygon(country, validPolygon)){
+            countriesInIntersection.push(country)
+        }
+    }
+    return countriesInIntersection.map(country => ({
+        name: country.properties.ADMIN,
+        code: country.properties.ISO_A3
+    }));
+}
